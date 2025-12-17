@@ -10,66 +10,65 @@
   </head>
 
   <body
-    class="min-h-screen bg-gradient-to-br from-pink-500 via-purple-600 to-indigo-700 overflow-y-auto"
+    class="min-h-screen bg-gradient-to-br from-pink-500 via-purple-600 to-indigo-700 overflow-y-auto flex justify-center items-start"
   >
     <!-- Background Music -->
     <audio id="music" src="/audio/third.mp3" autoplay loop></audio>
 
-    <div class="flex justify-center px-4 py-10">
-      <div class="text-center text-white max-w-4xl w-full">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">
-          🎂 Happy Birthday!
-        </h1>
+    <div class="w-full max-w-4xl px-4 py-10 text-white text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-8">
+        🎂 Happy Birthday!
+      </h1>
 
-        <p class="text-base md:text-lg leading-relaxed text-justify mb-8">
-          আজকের এই বিশেষ দিনটায়, তোমার জন্য আমার হৃদয়ের গভীর থেকে অজস্র ভালোবাসা
-          আর শুভকামনা রইল। 💐 তোমার হাসিটাই যেন আমার কাছে সবচেয়ে সুন্দর উপহার,
-          আর তোমার উপস্থিতি জীবনকে আরও রঙিন করে তোলে। এই নতুন বছরে তোমার জীবনে
-          আসুক অফুরন্ত সুখ, শান্তি আর সাফল্য।
+      <p class="text-base md:text-lg leading-relaxed text-justify bg-white/10 backdrop-blur-lg p-6 md:p-8 rounded-2xl shadow-xl">
+        On this day the world paused, the stars rearranged themselves, and the
+        sunrise sewed golden threads across the sky—just to match the brilliance
+        of you.
+        <br /><br />
 
-          <br /><br />
+        May your life unfold like a runway of endless possibilities, each step a
+        masterpiece, each moment a fresh fabric of joy.
+        <br /><br />
 
-          প্রতিটি সকাল শুরু হোক নতুন স্বপ্ন নিয়ে, আর প্রতিটি রাত শেষ হোক তৃপ্তির
-          হাসি নিয়ে। তোমার জীবনটা যেন ফুলের বাগানের মতো সুন্দর হয়, যেখানে দুঃখ
-          নামের কাঁটা কখনোই জায়গা না পায়। তুমি যেসব স্বপ্ন দেখো, সেগুলো একদিন
-          বাস্তব হোক—এই কামনাই করি মন থেকে।
+        May your sketchpad never run out of blank pages, may colors dance like
+        confetti in your mind, and may every stitch you weave turn into pure
+        magic ✨.
+        <br /><br />
 
-          <br /><br />
+        From haute-couture evenings to everyday street style, may you always
+        dress the world in your imagination—and have the confidence to wear it
+        proudly.
+        <br /><br />
 
-          আল্লাহ যেন তোমাকে সব সময় সুস্থ রাখেন, নিরাপদে রাখেন, আর তোমার প্রতিটি
-          চাওয়াকে পূরণ করে দেন। 💫 আজ শুধু তোমার জন্মদিন নয়, আজ সেই দিন যেদিন
-          পৃথিবী আরও একটু সুন্দর হয়েছিল—কারণ তুমি এসেছিলে। তোমার জীবনের প্রতিটি
-          মুহূর্ত হোক ভালোবাসায় ভরা, আনন্দে মোড়া আর আশীর্বাদে পরিপূর্ণ।
+        Let love be the most luxurious fabric woven through every chapter of
+        your life—soft, timeless, and forever unbreakable.
+        <br /><br />
 
-          <br /><br />
+        <span class="block text-center font-semibold text-lg md:text-xl mt-4">
+          💖 Best wishes for this beautiful day 🎂✨
+        </span>
+      </p>
 
-          <span
-            class="block text-center font-semibold text-lg md:text-xl mt-4"
-          >
-            জন্মদিনের অনেক অনেক শুভেচ্ছা ও ভালোবাসা 💖🎂✨
-          </span>
-        </p>
+      <p class="text-lg mt-8 mb-6">
+        Click the button for a surprise 🎁
+      </p>
 
-        <p class="text-lg mb-6">Click the button for a surprise 🎁</p>
-
-        <button
-          onclick="goToSurprise()"
-          class="bg-white text-pink-600 px-8 py-3 rounded-full text-lg font-bold hover:scale-110 transition shadow-lg"
-        >
-          Surprise!
-        </button>
-      </div>
+      <button
+        onclick="goToSurprise()"
+        class="bg-white text-pink-600 px-10 py-3 rounded-full text-lg font-bold hover:scale-110 transition-all shadow-lg animate-pulse"
+      >
+        Surprise!
+      </button>
     </div>
 
     <script>
-      // Redirect to surprise page
       function goToSurprise() {
         window.location.href = "surprise.html";
       }
 
-      // Optional: Auto-play music with user interaction fix for mobile browsers
-      window.addEventListener('load', () => {
-        const music = document.getElementById('music');
+      // Fix autoplay for mobile browsers
+      window.addEventListener("load", () => {
+        const music = document.getElementById("music");
         music.play().catch(() => {
           console.log("User interaction required to play audio on mobile.");
         });
